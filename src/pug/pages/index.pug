@@ -4,4 +4,79 @@ block title
   title Conservatoire — Accueil
 
 block main 
-    h1 Titre de la page d’accueil
+  div
+    h1 Conservatoire Henri Dutilleux 
+    h2 Conservatoire à rayonnement départemental du grand Belfort
+  ul
+    li
+      a(href="#") 
+        include ../../../assets/img/svg/icon_musique.svg
+        | Musique
+    li
+      a(href="#") 
+        include ../../../assets/img/svg/icon_theatre.svg
+        | Théâtre
+    li
+      a(href="#") 
+        include ../../../assets/img/svg/icon_danse.svg
+        | Danse
+
+  +duotone("agenda-musique-06.jpg", "violoncelles")
+
+  section 
+    img(src="../../../assets/img/photos/crd-int-01.jpg", alt="Salle de musique du conservatoire")
+    header
+      h2 Découvrez le Conservatoire, ses enseignements, ses équipes dans un nouveau lieu dédié à la culture artistique.
+      +btn("conservatoire.pug", "Plus d'infos")
+    div 
+      ul 
+        li 
+          span 9
+          span sites
+        li 
+          span 84
+          span enseignements
+        li 
+          span 1500
+          span élèves
+        li 
+          span 50
+          span disciplines
+
+  section 
+    header 
+      h2 Agenda 
+      p Lieu de création artistique, le conservatoire propose régulièrement des actions culturelles ouvertes à tous.
+      +btn("agenda.pug", "Tous les évènements")
+
+    +card(
+      "agenda-musique.jpg",
+      "description image",
+      "Concert d'ouverture",
+      "15 mars à 20h30",
+      'Dans le cadre de l’Enlèvement au sérail, Payot Genève organise une rencontre avec l’écrivain et journaliste turque dissidente Asl Erdogan.',
+      '#'
+    )
+    +card(
+      "agenda-theatre.jpg",
+      "description image",
+      "Le malade imaginaire",
+      "21 mars à 20h30",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus cursus euismod. Nam ultricies dui at velit eleifend, in tristique lectus rhoncus.',
+      '#'
+    )
+    +card(
+      "agenda-danse.jpg",
+      "description image",
+      "Concerto pour violons",
+      "15 avril à 20h30",
+      'Lorem ipsum dolor sit amet. Duis luctus cursus euismod. Nam ultricies dui at velit eleifend, in tristique lectus rhoncus.',
+      '#'
+    )
+
+  section 
+    header 
+      h2 Inscriptions 
+      p Vous êtes désireux d'entrer au conservatoire ? Vous trouverez ici toutes les informations sur les les modalités d'inscriptions.
+    +btn("#", "S'inscrire")
+    +duotone("crd-ext-01.jpg", "facade Est du conservatoire")

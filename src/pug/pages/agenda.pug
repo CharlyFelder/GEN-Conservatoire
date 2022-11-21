@@ -3,5 +3,59 @@ extends ../base.pug
 block title
   title Conservatoire — Agenda
 
-block main
-    h1 Titre de la page Agenda
+block main 
+  +hero(
+    "Agenda",
+    "Lieu de création artistique, le conservatoire propose régulièrement des actions culturelles ouvertes à tous.",
+    "agenda-musique-09.jpg",
+    "Orchestre"
+  )
+  div   
+    +card(
+      "agenda-musique.jpg",
+      "description image",
+      "Concert d'ouverture",
+      "15 mars à 20h30",
+      'Dans le cadre de l’Enlèvement au sérail, Payot Genève organise une rencontre avec l’écrivain et journaliste turque dissidente Asl Erdogan.',
+      '#'
+    )
+    +card(
+      "agenda-theatre.jpg",
+      "description image",
+      "Le malade imaginaire",
+      "21 mars à 20h30",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus cursus euismod. Nam ultricies dui at velit eleifend, in tristique lectus rhoncus.',
+      '#'
+    )
+    +card(
+      "agenda-danse.jpg",
+      "description image",
+      "Concerto pour violons",
+      "15 avril à 20h30",
+      'Lorem ipsum dolor sit amet. Duis luctus cursus euismod. Nam ultricies dui at velit eleifend, in tristique lectus rhoncus.',
+      '#'
+    )
+    +card(
+      "agenda-musique.jpg",
+      "description image",
+      "Concert d'ouverture",
+      "15 mars à 20h30",
+      'Dans le cadre de l’Enlèvement au sérail, Payot Genève organise une rencontre avec l’écrivain et journaliste turque dissidente Asl Erdogan.',
+      '#'
+    )
+    +card(
+      "agenda-theatre.jpg",
+      "description image",
+      "Le malade imaginaire",
+      "21 mars à 20h30",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus cursus euismod. Nam ultricies dui at velit eleifend, in tristique lectus rhoncus.',
+      '#'
+    )
+    +card(
+      "agenda-danse.jpg",
+      "description image",
+      "Concerto pour violons",
+      "15 avril à 20h30",
+      'Lorem ipsum dolor sit amet. Duis luctus cursus euismod. Nam ultricies dui at velit eleifend, in tristique lectus rhoncus.',
+      '#'
+    )

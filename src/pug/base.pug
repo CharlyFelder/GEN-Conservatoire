@@ -1,3 +1,5 @@
+include mixin.pug
+
 doctype html
 html(lang="en")
   head
@@ -6,14 +8,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     block title
   body
-    header 
-      nav 
-        ul
-          li 
-            a(href="/") Accueil
-          li 
-            a(href="conservatoire.pug") Conservatoire
-          li 
-            a(href="agenda.pug") Agenda
+    include includes/header.pug
     main
       block main
+    include includes/footer.pug
