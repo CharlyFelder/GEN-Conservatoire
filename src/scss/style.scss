@@ -1,0 +1,33 @@
+/*   
+Le fichier style.scss aggrège l'ensemble du code scss, 
+découpé en différents fichiers correspondant aux composants de l'interface
+La règle @import permet d'importer ici tous les fichiers css utilisés.
+Soyez attentifs à l'ordre d'import :
+  1. les polices via Google Font
+  2. Les libraries (Vendors)
+  3. Les variables (Utils)
+  4. Les règles générales (Base)
+  5. Les règles de composition (Layout)
+  6. Les composants d'interface (Components)
+*/
+
+// Polices de caractère
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,700;1,300;1,700&family=Space+Mono:ital@0;1&display=swap');
+
+// Librairies
+@import "vendors/normalize";
+
+// Utilitaires
+@import "utils/variables";
+@import "utils/functions";
+
+// Règles de base
+@import "base/main";
+@import "base/media";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+
+// Composants
+@import "components/menu";

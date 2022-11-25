@@ -1,22 +1,24 @@
-header 
-  a(href="/" aria-label="Retour à l'accueil")
-    include ../../../assets/img/svg/logo.svg
-
-    button
-        span
+header.header
+  div.header__start
+    a.header__logo(href="/" aria-label="Retour à l'accueil")
+      include ../../../assets/img/svg/logo.svg
+  
+  div.header__end
+    button.header__menuBtn.menuBurger
+      span.menuBurger__bar
     
-    nav
-        ul
-            li
-                a(href="conservatoire.pug") Le conservatoire
-            li
-                a(href="#") Enseignements
-            li
-                a(href="agenda") Agenda
-            li
-                a(href="#") Contact
-            li
-                a(href="#") S’inscrire
+    nav.header__menu.menu
+      ul.menu__list
+        li.menu__item
+          a.menu__link(href="conservatoire.pug") Le conservatoire
+        li.menu__item
+          a.menu__link(href="#") Enseignements
+        li.menu__item
+          a.menu__link(href="agenda.pug") Agenda
+        li.menu__item
+          a.menu__link(href="#") Contact
+        li.menu__item
+          a.menu__link(href="#") S'inscrire
 
-    button
-        include ../../../assets/img/svg/icon_search.svg
+    button.header__search
+      include ../../../assets/img/svg/icon_search.svg

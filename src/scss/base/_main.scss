@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: map-get($typo, 'sans-serif');
+  font-size: rem(13);
+  line-height: 1.6;
+  background-color: map-get($colors, lightColor);
+}
+
+h1,
+h2 {
+  font-family: map-get($typo, 'mono');
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: rem(36);
+}
+
+h2 {
+  font-size: rem(28);
+}
+
+h3 {
+  font-size: rem(18);
+  line-height: 1.4;
+}
+
+button {
+  background: none;
+  border: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}

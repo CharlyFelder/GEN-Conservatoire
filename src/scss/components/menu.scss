@@ -1,0 +1,32 @@
+.menu {
+  display: none;
+}
+
+// Icone Menu Hamburger
+
+.menuBurger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+
+  &__bar,
+  &__bar::before,
+  &__bar::after {
+    content: "";
+    background-color: map-get($colors, darkColor);
+    height: 2px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  &__bar::before {
+    top: -10px;
+  }
+
+  &__bar::after {
+    top: 10px;
+  }
+
+}

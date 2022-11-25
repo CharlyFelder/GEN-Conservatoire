@@ -1,0 +1,29 @@
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.duotone {
+  background-color: map-get($colors, secondary);
+  display: flex;
+  position: relative;
+
+  img {
+    filter: grayscale(100%);
+    mix-blend-mode: multiply;
+    flex: 1 0 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: map-get($colors, primary);
+    z-index: 1;
+    mix-blend-mode: lighten;
+  }
+}
