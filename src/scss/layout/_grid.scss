@@ -1,0 +1,13 @@
+.grid {
+
+  padding-left: map-get($spaces, s);
+  padding-right: map-get($spaces, s);
+
+  &.-fullHeight {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    gap: map-get($spaces, m)
+  }
+
+}

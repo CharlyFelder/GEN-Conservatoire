@@ -1,0 +1,23 @@
+.hero {
+  position: relative;
+
+  &__header {
+    color: map-get($colors , lightColor);
+    align-self: end;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: rem(13);
+    letter-spacing: rem(1);
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+
+
+}

@@ -9,7 +9,7 @@ mixin card(imgName, imgAlt, title, date, excerpt, link)
       a(href=`${ link }`) Plus d'info
 
 mixin duotone(imgName, imgAlt, imgSize, imgWidth, imgHeight)
-  picture.duotone
+  picture.duotone(class!=attributes.class)
     source(srcset!=`../../../assets/img/photos/${ imgName }.jpg?as=avif&width=${ imgSize }`, type="image/avif")
     source(srcset!=`../../../assets/img/photos/${ imgName }.jpg?as=webp&width=${ imgSize }`, type="image/webp")
     img(src=`../../../assets/img/photos/${ imgName }.jpg?width=${ imgSize }`, alt=`${ imgAlt }`, width=`${ imgWidth }`, height=`${ imgHeight }`)

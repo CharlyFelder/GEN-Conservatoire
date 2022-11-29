@@ -1,40 +1,41 @@
-footer 
+footer.grid.footer
   include ../../../assets/img/svg/icon_logoFooter.svg
 
-  nav 
-    h3 Menu 
-    ul 
-        li
-            a(href="#") Mentions légales
-        li
-            a(href="#") Archives
-        li
-            a(href="#") Contacts &amp; accès 
-        
-div 
-    h3 Contact 
-    adress
-        p 1 rue Paul Koepfler
-        p 90000 Belfort 
-        p
-            a(href="tel:0384542727") 03 84 54 27 27
-        p
-            a(href="mailto:conservatoire@agglo-belfort.fr") conservatoire@agglo-belfort.fr
-div
-    h3 Nous suivre 
-    ul 
-        li 
-            a(href="https://facebook.com", aria-label="Notre page facebook")
-                include ../../../assets/img/svg/icon_facebook.svg
-        li
-            a(href="https://instagram.com", aria-label="Notre page instagram") 
-                include ../../../assets/img/svg/icon_instagram.svg
-        li
-            a(href="https://twitter.com", aria-label="Notre page twitter") 
-                include ../../../assets/img/svg/icon_twitter.svg
-        li
-            a(href="https://youtube.com", aria-label="Notre page youtube") 
-                include ../../../assets/img/svg/icon_youtube.svg
+  nav.footer__menu
+    h3.footer__title Menu 
+    ul.listUnstyled
+      li
+        a(href="#") Mentions légales
+      li
+        a(href="#") Archives
+      li
+        a(href="#") Contacts &amp; accès
 
-div   
+  div.footer__contact 
+    h3.footer__title Contact 
+    address.footer__address
+      p 1 rue Paul Koepfler
+      p 90000 Belfort 
+      p
+        a(href="tel:0384542727") 03 84 54 27 27
+      p
+        a(href="mailto:conservatoire@agglo-belfort.fr") conservatoire@agglo-belfort.fr
+
+  div.footer__social   
+    h3.footer__title Nous suivre 
+    ul.footer__list.listUnstyled 
+      li
+        a(href="https://facebook.com", aria-label="Notre page facebook") 
+          include ../../../assets/img/svg/icon_facebook.svg
+      li
+        a(href="https://instagram.com", aria-label="Notre page instagram") 
+          include ../../../assets/img/svg/icon_instagram.svg
+      li
+        a(href="https://twitter.com", aria-label="Notre page twitter") 
+          include ../../../assets/img/svg/icon_twitter.svg
+      li
+        a(href="https://youtube.com", aria-label="Notre page youtube") 
+          include ../../../assets/img/svg/icon_youtube.svg
+
+  div.footer__gb   
     include ../../../assets/img/svg/logo-grand-belfort.svg

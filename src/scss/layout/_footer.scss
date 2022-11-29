@@ -1,0 +1,42 @@
+.footer {
+  background-color: map-get($colors , darkColor);
+  color: map-get($colors , lightColor);
+  padding-top: map-get($spaces , m );
+  padding-bottom: map-get($spaces , m );
+
+  a {
+    color: map-get($colors , lightColor);
+    text-decoration: none;
+  }
+
+  & > div svg path {
+    fill: map-get($colors , lightColor);
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: rem(11);
+    letter-spacing: rem(1);
+  }
+
+  &__address {
+    p {
+      margin: 0;
+    }
+  }
+
+  &__gb svg {
+    width: 100px;
+  }
+
+  & > *:not(:first-child) {
+    margin-top: map-get($spaces , s );
+  }
+
+
+}

@@ -1,0 +1,36 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: map-get($colors, lightColor);
+  display: flex;
+  justify-content: space-between;
+  padding: map-get($spaces , xs) map-get($spaces , s);
+
+  &__start,
+  &__end {
+    display: flex;
+    align-items: center;
+  }
+
+  &__end {
+    flex-direction: row-reverse;
+  }
+
+  &__search {
+    width: 80px;
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 20;
+
+    .style-svg {
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+  }
+}

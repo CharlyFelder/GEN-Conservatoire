@@ -1,0 +1,22 @@
+.chapo {
+  background-color: map-get($colors , lightColor);
+  display: grid;
+  align-items: center;
+  margin-left: -#{map-get($spaces, s )};
+  ;
+  margin-right: -#{map-get($spaces, s )};
+  ;
+
+  &.-cols {
+    grid-template-columns: repeat(3, 1fr);
+    gap: map-get($spaces , s);
+  }
+
+  &__link {
+    color: map-get($colors, darkColor);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
