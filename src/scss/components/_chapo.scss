@@ -3,9 +3,8 @@
   display: grid;
   align-items: center;
   margin-left: -#{map-get($spaces, s )};
-  ;
+
   margin-right: -#{map-get($spaces, s )};
-  ;
 
   &.-cols {
     grid-template-columns: repeat(3, 1fr);
