@@ -10,12 +10,12 @@ mixin card(imgName, imgAlt, title, date, excerpt, link)
 
 mixin duotone(imgName, imgAlt, imgSize, imgWidth, imgHeight)
   picture.duotone(class!=attributes.class)
-    source(srcset!=`../../../assets/img/photos/${ imgName }.jpg?as=avif&width=${ imgSize }`, type="image/avif")
-    source(srcset!=`../../../assets/img/photos/${ imgName }.jpg?as=webp&width=${ imgSize }`, type="image/webp")
+    //- source(srcset!=`../../../assets/img/photos/${ imgName }.jpg?as=avif&width=${ imgSize }`, type="image/avif")
+    //- source(srcset!=`../../../assets/img/photos/${ imgName }.jpg?as=webp&width=${ imgSize }`, type="image/webp")
     img(src=`../../../assets/img/photos/${ imgName }.jpg?width=${ imgSize }`, alt=`${ imgAlt }`, width=`${ imgWidth }`, height=`${ imgHeight }`)
 
 mixin btn(btnHref, btnText)
-  a.btn(href=`${ btnHref }`)
+  a.btn(href=`${ btnHref }`, class!=attributes.class)
     svg(width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg')
       path(d='M23.354 12.354a.5.5 0 000-.708l-3.182-3.182a.5.5 0 10-.707.708L22.293 12l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 12.5h23v-1H0v1z' fill='#1C1514')
     = btnText

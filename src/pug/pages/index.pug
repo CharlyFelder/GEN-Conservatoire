@@ -26,8 +26,8 @@ block main
 
   section.grid.crd
     picture.crd__img
-      source(srcset="../../../assets/img/photos/crd-int-01.jpg?as=avif&width=1000", type="image/avif")
-      source(srcset="../../../assets/img/photos/crd-int-01.jpg?as=webp&width=1000", type="image/webp")
+      //- source(srcset="../../../assets/img/photos/crd-int-01.jpg?as=avif&width=1000", type="image/avif")
+      //- source(srcset="../../../assets/img/photos/crd-int-01.jpg?as=webp&width=1000", type="image/webp")
       img(src="../../../assets/img/photos/crd-int-01.jpg?width=1000", alt="Salle de musique du conservatoire")
     header.crd__header
       h2.crd__title Découvrez le Conservatoire, ses enseignements, ses équipes dans un nouveau lieu dédié à la culture artistique.
@@ -82,5 +82,5 @@ block main
     header 
       h2 Inscriptions 
       p Vous êtes désireux d'entrer au conservatoire ? Vous trouverez ici toutes les informations sur les les modalités d'inscriptions.
-    +btn("#", "S'inscrire")
+    +btn("#", "S'inscrire")(class="-outlined")
     +duotone("crd-ext-01", "facade Est du conservatoire", 2000, 2000, 1000)

@@ -1,14 +1,14 @@
 // Couleurs
 
 $colors: (
-  primary: #1d096b,
-  secondary: #feaa9b,
-  darkColor: #1C1514,
-  gray-300: #828282,
-  gray-200: #CDC8C6,
-  gray-100: #E9E7E4,
+  primary:    #1d096b,
+  secondary:  #feaa9b,
+  darkColor:  #1C1514,
+  gray-300:   #828282,
+  gray-200:   #CDC8C6,
+  gray-100:   #E9E7E4,
   lightColor: #FAFAFA,
-  selection: #caae7b,
+  selection:  #caae7b,
 );
 
 // Typographie
@@ -22,6 +22,50 @@ $typo: (
 
 $spaces: (
   xs: 12px,
-  s: 24px,
-  m: 48px,
-  l: 96px)
+  s:  24px,
+  m:  48px,
+  l:  96px
+);
+
+// Breakpoints 
+$bp: (
+  sm: 640px,
+  md: 960px,
+  lg: 1296px
+);
+
+// Tailles typographiques
+$body: (
+  min: 13px,
+  max: 15px
+);
+
+$heading-1: (
+  min: 36px,
+  max: 64px
+);
+
+$heading-2: (
+  min: 28px,
+  max: 32px
+);
+
+$heading-3: (
+  min: 18px,
+  max: 24px
+);
+
+$excerpt: (
+  min: 22px,
+  max: 18px
+);
+
+$small: (
+  min: 11px,
+  max: 13px
+);
+
+$display-1: (
+  min: 48px,
+  max: 64px
+);

@@ -1,0 +1,37 @@
+.btn {
+  border: 1px solid map-get($colors, secondary);
+  padding: 16px map-get($spaces, 's');
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  color: map-get($colors, darkColor);
+  text-transform: uppercase;
+  text-decoration: none;
+  @include fluid-type($small);
+  font-size: rem(12);
+  font-weight: bold;
+  letter-spacing: rem(1);
+
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    box-shadow: inset 0 0 0 8px map-get($colors, secondary);
+  }
+
+  &.-outlined {
+    border-color: map-get($colors , lightColor);
+    color: map-get($colors , lightColor);
+
+    svg path {
+      fill: map-get($colors , lightColor);
+    }
+
+    &:hover {
+      box-shadow: inset 0 0 0 8px map-get($colors, lightColor);
+    }
+
+  }
+
+}

@@ -21,6 +21,7 @@ Soyez attentifs à l'ordre d'import :
 @import "utils/variables";
 @import "utils/functions";
 @import "utils/utilsClass";
+@import "utils/mixins";
 
 // Règles de base
 @import "base/main";
@@ -35,4 +36,4 @@ Soyez attentifs à l'ordre d'import :
 @import "components/menu";
 @import "components/hero";
 @import "components/chapo";
-@import "components/btn";
+@import "components/button";

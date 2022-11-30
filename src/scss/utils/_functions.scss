@@ -1,4 +1,11 @@
+@use 'sass:math';
+
 // Fonction pour convertir des valeurs de px en rem
 @function rem($pixels) {
   @return #{ calc($pixels / 16) }rem;
+}
+
+// Fonction qui permet de retourner une valeur sans son unité de mesure
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
 }

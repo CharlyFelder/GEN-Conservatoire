@@ -1,0 +1,23 @@
+// Mixin qui permet de rendre la taille de typographie fluide
+
+@mixin fluid-type($heading) {
+  $min-vw: map-get($bp, sm);       // taille minimum d'écran
+  $max-vw: map-get($bp, lg);       // taille maximum d'écran
+  $min-font-size: map-get($heading, min);   // taille minimum de police
+  $max-font-size: map-get($heading, max);   // taille maximum de police
+
+  // @link https://css-tricks.com/snippets/css/fluid-typography/
+  // Calcul du "scaler" :
+  // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+  // Exemple avec $heading-1 :
+  // taille d'écran min    => 36 + (64 - 36) * ((640 - 640) / (1296 - 640))  = 36 + 28 * (0 / 656)   = 36
+  // taille d'écran medium => 36 + (64 - 36) * ((960 - 640) / (1296 - 640))  = 36 + 28 * (320 / 656) = 49,66
+  // taille d'écran max    => 36 + (64 - 36) * ((1296 - 640) / (1296 - 640)) = 36 + 28 * (656 / 656) = 64
+
+  $scaler: calc( #{ rem( strip-unit( $min-font-size )) } + #{ strip-unit( $max-font-size - $min-font-size ) } * ( ( 100vw - #{$min-vw} ) / #{ strip-unit( $max-vw - $min-vw ) } ) );
+
+  // La fonction CSS clamp() permet de ramener une valeur entre deux bornes inférieure et supérieure. 
+  // Cette fonction utilise trois paramètres : une valeur minimale, la valeur à tester et une valeur maximale.
+
+  font-size: clamp( rem( strip-unit( $min-font-size ) ), $scaler, rem( strip-unit( $max-font-size ) ) );
+}
