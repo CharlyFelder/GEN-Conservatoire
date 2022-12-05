@@ -1,0 +1,40 @@
+.section {
+  position: relative;
+
+
+  &__title {
+    @include fluid-type($heading-1);
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  &__intro {
+    @include fluid-type($excerpt);
+    line-height: 1.5;
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-color: map-get($colors , primary);
+      opacity: 0.5;
+    }
+  }
+
+  &.-inverse {
+    color: map-get($colors, lightColor);
+  }
+
+  &.-bg {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+
+}

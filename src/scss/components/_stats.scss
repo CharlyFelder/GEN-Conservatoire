@@ -1,0 +1,12 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: map-get($spaces, 'm' );
+
+  &__nb {
+    @include fluid-type($display-1);
+    line-height: 1.1;
+    color: map-get($colors, secondary);
+    display: block;
+  }
+}

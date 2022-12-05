@@ -1,0 +1,32 @@
+.crd {
+  margin: 80px 0;
+
+  &__header {
+    padding: 80px 0 104px;
+  }
+
+  &__title {
+    @include fluid-type($excerpt);
+    line-height: 1.5;
+    font-family: map-get($typo, 'mono');
+    font-style: italic;
+
+    span {
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: rem(15);
+        z-index: -1;
+        background-color: map-get($colors, secondary);
+
+
+      }
+    }
+  }
+}

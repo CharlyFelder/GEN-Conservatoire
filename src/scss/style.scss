@@ -30,6 +30,7 @@ Soyez attentifs à l'ordre d'import :
 // Layout
 @import "layout/header";
 @import "layout/footer";
+@import "layout/section";
 @import "layout/grid";
 
 // Composants
@@ -37,3 +38,6 @@ Soyez attentifs à l'ordre d'import :
 @import "components/hero";
 @import "components/chapo";
 @import "components/button";
+@import "components/card";
+@import "components/crd";
+@import "components/stats";

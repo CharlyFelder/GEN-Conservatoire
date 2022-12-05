@@ -30,28 +30,27 @@ block main
       //- source(srcset="../../../assets/img/photos/crd-int-01.jpg?as=webp&width=1000", type="image/webp")
       img(src="../../../assets/img/photos/crd-int-01.jpg?width=1000", alt="Salle de musique du conservatoire")
     header.crd__header
-      h2.crd__title Découvrez le Conservatoire, ses enseignements, ses équipes dans un nouveau lieu dédié à la culture artistique.
+      h2.crd__title Découvrez le Conservatoire, <span>ses enseignements</span>, ses équipes dans un nouveau lieu dédié à la culture artistique.
       +btn("conservatoire.pug", "Plus d'infos")
-    div.crd__stats.stats
-      ul.stats__list.listUnstyled
-        li.stats__item
-          span.stats__nb 9
-          span.stats__text sites
-        li.stats__item
-          span.stats__nb 84
-          span.stats__text enseignements
-        li.stats__item 
-          span.stats__nb 1500
-          span.stats__text élèves
-        li.stats__item 
-          span.stats__nb 50
-          span.stats__text disciplines
+    ul.crd__stats.stats.listUnstyled
+      li.stats__item
+        span.stats__nb 9
+        span.stats__text sites
+      li.stats__item
+        span.stats__nb 84
+        span.stats__text enseignements
+      li.stats__item 
+        span.stats__nb 1500
+        span.stats__text élèves
+      li.stats__item 
+        span.stats__nb 50
+        span.stats__text disciplines
 
-  section.grid
-    header 
-      h2 Agenda 
-      p Lieu de création artistique, le conservatoire propose régulièrement des actions culturelles ouvertes à tous.
-      +btn("agenda.pug", "Tous les évènements")
+  section.grid.section
+    header.section__header
+      h2.section__title Agenda 
+      p.section__intro Lieu de création artistique, le conservatoire propose régulièrement des actions culturelles ouvertes à tous.
+    +btn("agenda.pug", "Tous les évènements")(class="section__link")
 
     +card(
       "agenda-musique",
@@ -78,9 +77,9 @@ block main
       '#'
     )
 
-  section.grid 
-    header 
-      h2 Inscriptions 
-      p Vous êtes désireux d'entrer au conservatoire ? Vous trouverez ici toutes les informations sur les les modalités d'inscriptions.
-    +btn("#", "S'inscrire")(class="-outlined")
-    +duotone("crd-ext-01", "facade Est du conservatoire", 2000, 2000, 1000)
+  section.grid.section.-inverse.-bg
+    header.section__header
+      h2.section__title Inscriptions 
+      p.section__intro Vous êtes désireux d'entrer au conservatoire ? Vous trouverez ici toutes les informations sur les les modalités d'inscriptions.
+    +btn("#", "S'inscrire")(class="-outlined section__link")
+    +duotone("crd-ext-01", "facade Est du conservatoire", 2000, 2000, 1000)(class="section__img")
