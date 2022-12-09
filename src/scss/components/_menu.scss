@@ -1,6 +1,38 @@
 .menu {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: map-get($colors, 'primary');
+  display: flex;
+  @include fluid-type($excerpt);
+  transition: all .5s ease-in-out;
+
+  &__list {
+    margin-left: 10vw;
+    margin-top: 25vh;
+  }
+
+  &__item {
+    margin-top: rem(8);
+  }
+
+  &__link {
+    color: map-get($colors, 'lightColor');
+    text-decoration: none;
+    padding: 5px 20px;
+  }
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
 }
+
 
 // Icone Menu Hamburger
 
@@ -19,6 +51,7 @@
     left: 0;
     width: 100%;
     z-index: 3;
+    transition: all .3s ease-in-out;
   }
 
   &__bar::before {
@@ -29,4 +62,18 @@
     top: 10px;
   }
 
+}
+
+.menuBurger--open {
+  .menuBurger__bar {
+    transform: rotate(135deg);
+    background-color: map-get($colors, lightColor);
+
+    &::before,
+    &::after {
+      top: 0;
+      transform: rotate(90deg);
+      background-color: map-get($colors, lightColor);
+    }
+  }
 }

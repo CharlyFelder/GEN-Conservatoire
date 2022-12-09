@@ -21,7 +21,9 @@ mixin btn(btnHref, btnText)
     = btnText
 
 mixin hero(title, chapo, imgName, imgAlt)
-  header 
-    h1= title
-  p= chapo
-  +duotone(imgName, imgAlt)
+  div.hero
+    header.hero__header
+      h1.hero__title= title
+    div.hero__chapo.chapo
+      p.hero__text= chapo
+    +duotone(imgName, imgAlt, 2000, 2000, 1000)(class="hero__img")
